@@ -33,7 +33,7 @@ const mainNavItems: NavItem[] = [
   {
     title: "工作台",
     icon: <HomeIcon />,
-    href: "/dashboard",
+    href: "/",
     badge: "3",
   },
   {
@@ -133,10 +133,10 @@ function MainSidebar({ children }: { children: React.ReactNode }) {
                 {mainNavItems.map((item, index) => (
                   <SidebarMenuItem key={index}>
                     <a 
-                      href={item.href === "/dashboard" ? "/" : item.href}
+                      href={item.href}
                       className={cn(
                         "flex w-full items-center gap-3 overflow-hidden rounded-lg px-3 py-2.5 text-sm ring-sidebar-ring outline-hidden transition-all group-has-data-[sidebar=menu-action]/menu-item:pr-8 group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:px-2 focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&_svg]:size-4 [&_svg]:shrink-0 [&>span:last-child]:truncate",
-                        isActive(item.href === "/dashboard" ? "/" : item.href) ? 'bg-sidebar-primary text-sidebar-primary-foreground shadow-lg shadow-blue-500/30' : 'text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground'
+                        isActive(item.href) ? 'bg-sidebar-primary text-sidebar-primary-foreground shadow-lg shadow-blue-500/30' : 'text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground'
                       )}
                     >
                       {item.icon}
