@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/sidebar"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
-import { HomeIcon, UsersIcon, TruckIcon, FactoryIcon, ThermometerIcon, MonitorIcon, DollarSignIcon, UserIcon, SettingsIcon, LogOutIcon } from "lucide-react"
+import { HomeIcon, UsersIcon, TruckIcon, FactoryIcon, ThermometerIcon, MonitorIcon, DollarSignIcon, BookOpenIcon, UserIcon, SettingsIcon, LogOutIcon } from "lucide-react"
 
 // 导航项类型定义
 interface NavItem {
@@ -65,6 +65,11 @@ const mainNavItems: NavItem[] = [
     title: "财务风控",
     icon: <DollarSignIcon />,
     href: "/finance",
+  },
+  {
+    title: "系统文档",
+    icon: <BookOpenIcon />,
+    href: "/docs",
   },
 ]
 
