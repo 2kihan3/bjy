@@ -112,8 +112,10 @@ function MainSidebar({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()
   
   const isActive = (href: string) => {
-    if (href === "/") return pathname === "/"
-    return pathname.startsWith(href)
+    // 移除 basePath 前缀进行比较
+    const pathnameWithoutBase = pathname.replace(/^\/bjy/, '')
+    if (href === "/") return pathnameWithoutBase === "/"
+    return pathnameWithoutBase.startsWith(href)
   }
   
   return (
